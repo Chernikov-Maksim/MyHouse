@@ -1,0 +1,33 @@
+@import "variables";
+
+.footer {
+  background-color: #474747;
+  &__container {
+    @media (max-width: 509px) {
+      padding: 16px 0px;
+      justify-content: center;
+    }
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 5px;
+    padding: 20px 0px;
+  }
+
+  &__copyright {
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 500;
+    opacity: 90%;
+    color: $white;
+  }
+
+  &__organization {
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 500;
+    opacity: 90%;
+    color: $white;
+  }
+}

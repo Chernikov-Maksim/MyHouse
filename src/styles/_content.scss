@@ -1,0 +1,208 @@
+@import "variables";
+
+.content {
+  &__container {
+    @media (max-width: 992px) {
+      padding: 78px 0px 0px 0px;
+    }
+    padding: 154px 0px 0px 0px;
+  }
+
+  &__banner {
+    position: relative;
+    margin-bottom: 20px;
+    .desktop {
+      @media (max-width: 992px) {
+        height: 350px;
+      }
+      @media (max-width: 768px) {
+        display: none;
+      }
+      border-radius: 15px;
+      width: 100%;
+    }
+
+    .tablet {
+      @media (max-width: 768px) {
+        display: block;
+      }
+      @media (max-width: 568px) {
+        display: none;
+      }
+      display: none;
+      width: 100%;
+    }
+    .mobile {
+      @media (max-width: 568px) {
+        display: block;
+      }
+      display: none;
+      width: 100%;
+    }
+  }
+  &__column {
+    @media (max-width: 992px) {
+      top: 30px;
+      left: 45px;
+    }
+    @media (max-width: 568px) {
+      top: 25px;
+      left: 30px;
+    }
+    position: absolute;
+    top: 45px;
+    left: 60px;
+  }
+  &__title {
+    @media (max-width: 992px) {
+      font-size: 36px;
+      line-height: 41px;
+      max-width: 420px;
+    }
+    @media (max-width: 568px) {
+      font-size: 30px;
+      font-weight: 700;
+      line-height: 36px;
+      max-width: 228px;
+    }
+    font-size: 45px;
+    line-height: 51.75px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    letter-spacing: -0.01em;
+    width: 100%;
+    max-width: 525px;
+    color: $white;
+  }
+  &__text {
+    @media (max-width: 992px) {
+      max-width: 420px;
+    }
+    @media (max-width: 568px) {
+      font-size: 14px;
+      line-height: 21px;
+      max-width: 268px;
+    }
+    font-size: 16px;
+    line-height: 21.6px;
+    font-weight: 500;
+    width: 100%;
+    max-width: 500px;
+    display: inline-block;
+    color: $white;
+  }
+  &__cards {
+    @media (max-width: 767px) {
+      flex-direction: column;
+    }
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  .item-content {
+    &__card {
+      @media (max-width: 1060px) {
+        min-height: 300px;
+        display: inline-block;
+        padding: 25px 30px;
+      }
+      @media (max-width: 767px) {
+        padding: 20px 25px;
+      }
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+      padding: 30px 40px;
+      border-radius: 15px;
+      width: 100%;
+      min-height: 230px;
+      background: $gray;
+    }
+    &__title {
+      @media (max-width: 767px) {
+        margin-bottom: 3px;
+      }
+      font-size: 18px;
+      line-height: 24.3px;
+      font-weight: 700;
+      margin-bottom: 5px;
+      color: $black;
+    }
+    &__adress {
+      display: flex;
+      align-items: flex-start;
+      gap: 11px;
+      .text {
+        @media (max-width: 767px) {
+          max-width: 100%;
+        }
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+        max-width: 196px;
+        opacity: 50%;
+        color: $black;
+      }
+    }
+    &__circle {
+      @media (max-width: 1060px) {
+        bottom: -10px;
+      }
+      @media (max-width: 568px) {
+        display: none;
+      }
+      position: absolute;
+      right: 0;
+      bottom: 0;
+    }
+    &__circles {
+      @media (max-width: 568px) {
+        display: block;
+      }
+      display: none;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+    }
+
+    &__building {
+      @media (max-width: 1060px) {
+        display: none;
+      }
+      position: absolute;
+      right: 0;
+      bottom: 0;
+    }
+    &__tablet {
+      @media (max-width: 1060px) {
+        display: block;
+      }
+      @media (max-width: 568px) {
+        display: none;
+      }
+      display: none;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+    }
+    &__mobile {
+      @media (max-width: 568px) {
+        display: block;
+      }
+      display: none;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+    }
+  }
+}
+
+.mark {
+  width: 12px;
+  height: 16px;
+  margin-top: 2px;
+}

@@ -1,0 +1,244 @@
+@import "variables";
+
+.header {
+  position: fixed;
+  width: 100%;
+  z-index: 15;
+  background-color: $white;
+  border-radius: 0px 0px 40px 40px;
+  &__logo {
+    @media (max-width: 568px) {
+      width: 158px;
+      height: 34px;
+    }
+    width: 183.36px;
+    height: 40px;
+  }
+
+  &__row {
+    @media (max-width: 992px) {
+      border: none;
+    }
+    @media (max-width: 568px) {
+      padding: 19px 0px;
+    }
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0px;
+    border-bottom: 1px solid $lightBlack;
+  }
+
+  &__navigation {
+    @media (max-width: 992px) {
+      display: none;
+    }
+    padding: 25px 0px;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  &__link {
+    font-size: 16px;
+    font-weight: 500;
+    color: $black;
+    transition: all 0.2s ease-in-out;
+    &:hover {
+      color: $blue;
+    }
+  }
+
+  &__last {
+    @media (max-width: 568px) {
+      gap: 15px;
+    }
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+}
+
+.btn-account {
+  @media (max-width: 568px) {
+    padding: 11px;
+  }
+  border-radius: 25px;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  border: none;
+  cursor: pointer;
+  color: $white;
+  background: $blue;
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    background: $darkBlue;
+  }
+}
+
+.account-text {
+  @media (max-width: 568px) {
+    display: none;
+  }
+}
+
+.body-gray {
+  transition: all 0.2s ease-in-out;
+  background-color: #f7f7f7;
+}
+
+.body-white {
+  transition: all 0.2s ease-in-out;
+  background-color: white;
+}
+
+.navbar {
+  display: none;
+}
+
+.hamb {
+  display: none;
+}
+
+.popup {
+  display: none;
+}
+
+.navbar__wrap .menu {
+  display: none;
+}
+
+@media (max-width: 992px) {
+  .navbar {
+    display: block;
+  }
+  .navbar__wrap .menu {
+    display: none;
+  }
+
+  .hamb {
+    display: block;
+  }
+
+  .hamb__field {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .bar-before {
+    display: block;
+    width: 30px;
+    height: 2px;
+    margin-bottom: 8px;
+    border-radius: 3px;
+    background-color: $black;
+    transition: all 0.2s ease-in-out;
+  }
+  .bar {
+    display: block;
+    width: 30px;
+    height: 2px;
+    border-radius: 3px;
+    background-color: $black;
+    transition: all 0.2s ease-in-out;
+    margin-bottom: 8px;
+  }
+  .bar-after {
+    display: block;
+    width: 30px;
+    height: 2px;
+    border-radius: 3px;
+    background-color: $black;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .popup {
+    position: fixed;
+    bottom: -100%;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $gray;
+    z-index: 100;
+    display: block;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .popup.open {
+    right: 0;
+    bottom: -79px;
+  }
+
+  .popup .menu {
+    @media (max-width: 568px) {
+      gap: 20px;
+    }
+    padding: 60px 16px 0px 16px;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+  }
+
+  .popup .menu > li {
+    width: 100%;
+    display: inline-flex;
+    text-align: center;
+  }
+
+  .popup .menu > li > a {
+    width: 100%;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 27px;
+    color: $black;
+    transition: all 0.2s ease-in-out;
+    &:hover {
+      color: $blue;
+    }
+  }
+
+  .btn__text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    color: #ffffff;
+    margin-left: 10px;
+  }
+
+  .hamb__field.active .bar {
+    display: none;
+  }
+
+  .hamb__field.active .bar-before {
+    transform: translateY(1px) rotate(45deg);
+  }
+
+  .hamb__field.active .bar-after {
+    transform: translateY(-9px) rotate(-45deg);
+  }
+
+  body.noscroll {
+    overflow: hidden;
+  }
+}
+@media (max-width: 568px) {
+  .popup.open {
+    bottom: -73px;
+  }
+  .popup {
+    bottom: -100%;
+  }
+}

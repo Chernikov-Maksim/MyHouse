@@ -1,0 +1,143 @@
+@import "variables";
+
+.news {
+  &__container {
+    @media (max-width: 992px) {
+      padding: 80px 0px;
+    }
+    @media (max-width: 568px) {
+      padding: 60px 0px;
+    }
+    padding: 100px 0px;
+  }
+  &__row {
+    @media (max-width: 568px) {
+      margin-bottom: 30px;
+    }
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 50px;
+  }
+  &__button {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+  }
+  &__title {
+    @media (max-width: 568px) {
+      font-size: 30px;
+      line-height: 38px;
+    }
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 45px;
+    letter-spacing: -0.01em;
+    color: $black;
+  }
+}
+
+.item-news {
+  &__link {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    transition: all 0.2s ease-in-out;
+    &:hover .item-news__text {
+      color: $darkBlue;
+    }
+    &:hover .item-news__arrow svg {
+      margin-left: 3px;
+      transition: all 0.2s ease-in-out;
+      path {
+        stroke: $darkBlue;
+      }
+    }
+  }
+  &__text {
+    font-size: 14px;
+    font-weight: 700;
+    transition: all 0.2s ease-in-out;
+    color: $blue;
+  }
+
+  &__arrow path {
+    transition: all 0.2s ease-in-out;
+  }
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  @media (max-width: 768px) {
+    background: $white;
+  }
+  font-size: 18px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  background: $gray;
+  min-height: 358px;
+}
+
+.swiper-item {
+  display: flex;
+  flex-direction: column;
+  padding: 25px 30px;
+}
+
+.swiper-date {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
+  margin-bottom: 5px;
+  opacity: 33%;
+  color: $black;
+}
+.swiper-text {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  margin-bottom: 20px;
+  color: $black;
+}
+
+.swiper-slide:nth-of-type(2),
+.swiper-slide:nth-of-type(3) {
+  .swiper-text {
+    margin-bottom: 44px;
+  }
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  position: relative;
+  background-color: $white;
+  border-radius: 50%;
+  box-shadow: 0px 0px 25px 0px #33333308;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  svg {
+    width: 10px;
+    height: 16px;
+  }
+  path {
+    transition: all 0.2s ease-in-out;
+  }
+
+  &:hover path {
+    stroke: $blue;
+  }
+}
