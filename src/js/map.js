@@ -30,3 +30,4 @@ async function initMap() {
 
     map.geoObjects.add(placemark);
 }
+
